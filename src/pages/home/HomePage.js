@@ -3,8 +3,16 @@ import React, { Component } from 'react';
 class HomePage extends Component {
 
     render() {
+        const { helloWorld, names } = this.props;
         return (
-            <h1>{this.props.helloWorld}</h1>
+            <div>
+                <h1>{helloWorld}</h1>
+                {
+                    names.map((name) => {
+                       return (<p>{name.name}</p>)
+                    })
+                }
+            </div>
         );
     }
 }
